@@ -47,7 +47,7 @@ public class WebViewBridgeManager extends ReactWebViewManager {
   private void sendToBridge(WebView root, String message) {
     //root.loadUrl("javascript:(function() {\n" + script + ";\n})();");
     String script = "WebViewBridge.onMessage('" + message + "');";
-    root.evaluateJavascript(root, script);
+    root.evaluateJavascript(script, null);
   }
 
   @Override
